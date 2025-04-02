@@ -1,8 +1,8 @@
-"use client"
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import * as React from "react";
-import { Moon, Sun } from "lucide-react";
+import { Moon, Sun, Laptop } from "lucide-react";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
@@ -34,9 +34,9 @@ export default function Home() {
             <Button variant="outline" size="icon">
               {theme === "dark" ? (
                 <Moon className="h-[1.2rem] w-[1.2rem]" />
-              ) : (
+              ) : theme === "light" ? (
                 <Sun className="h-[1.2rem] w-[1.2rem]" />
-              )}
+              ) : <Laptop className="h-[1.2rem] w-[1.2rem]"/>} {/* Ensures correct icon rendering */}
               <span className="sr-only">Toggle theme</span>
             </Button>
           </DropdownMenuTrigger>
