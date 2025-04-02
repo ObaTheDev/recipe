@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 export default function Home() {
-  const { theme, setTheme } = useTheme(); // Get current theme
+  const { theme, setTheme } = useTheme("system"); // Get current theme
 
   return (
     <motion.div 
